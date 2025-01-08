@@ -78,6 +78,9 @@ cd game-day-notifications
 2. Run the function and check CloudWatch for logs.
 3. Ensure notifications are sent, check your email
 
+**Email Notifications**
+<img width="712" alt="image" src="https://github.com/user-attachments/assets/ed232274-fadf-4ece-8d31-a43a63f32ad3" />
+
 
 **What We Learned**
 1. Design of a notification system with AWS SNS and Lambda.

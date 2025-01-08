@@ -48,8 +48,8 @@ cd game-day-notifications
 ##**Setup Instructions**
 
 **Create an SNS Topic**
--In AWS, navigate to SNS and create a Standard topic.
--Name the topic (e.g., gd_topic) and save the ARN.
+1. -In AWS, navigate to SNS and create a Standard topic.
+2. -Name the topic (e.g., gd_topic) and save the ARN.
 
 **Add Subscriptions**
 -In SNS, click the topic and create a subscription.

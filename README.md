@@ -23,17 +23,20 @@ An alert system that sends real-time NBA game scores to subscribers via SMS/Emai
 - **API**: NBA Game API (SportsData.io)
 - **Language**: Python 3.x
 
-## **Project Structure**
 
+## **Project Structure**
+```bash
 game-day-notifications/
 ├── src/
-│   └── gd_notifications.py
+│   ├── gd_notifications.py          # Main Lambda function code
 ├── policies/
-│   ├── gd_sns_policy.json
-│   ├── gd_eventbridge_policy.json
-│   └── gd_lambda_policy.json
+│   ├── gb_sns_policy.json           # SNS publishing permissions
+│   ├── gd_eventbridge_policy.json   # EventBridge to Lambda permissions
+│   └── gd_lambda_policy.json        # Lambda execution role permissions
 ├── .gitignore
-└── README.md
+└── README.md                        # Project documentation
+```
+
 
 
 ### **Clone the Repository**

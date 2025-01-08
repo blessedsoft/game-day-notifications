@@ -4,24 +4,24 @@
 An alert system that sends real-time NBA game scores to subscribers via SMS/Email using **Amazon SNS**, **AWS Lambda**, **Python**, **EventBridge**, and the **NBA API**.
 
 ## **Features**
-- Fetches live NBA scores.
-- Sends score updates to subscribers via SMS/Email.
-- Automates updates using Amazon EventBridge.
-- Secure with least privilege IAM policies.
+1. Fetches live NBA scores.
+2. Sends score updates to subscribers via SMS/Email.
+3. Automate updates using Amazon EventBridge.
+4. Secure with least privilege IAM policies.
 
 ## **Prerequisites**
-- Account at [sportsdata.io](https://sportsdata.io/).
-- AWS account and basic Python knowledge.
+1. Account at [sportsdata.io](https://sportsdata.io/).
+2, AWS account and basic Python knowledge.
 
 ## **Technical Architecture**
 ![image](https://github.com/user-attachments/assets/fb965771-eba0-4591-91cf-c294eecae55b)
 
 
 ## **Technologies**
-- **Cloud Provider**: AWS
-- **Services**: SNS, Lambda, EventBridge
-- **API**: NBA Game API (SportsData.io)
-- **Language**: Python 3.x
+1. **Cloud Provider**: AWS
+2. **Services**: SNS, Lambda, EventBridge
+3. **API**: NBA Game API (SportsData.io)
+4. *Language**: Python 3.x
 
 
 ## **Project Structure**
@@ -45,49 +45,50 @@ git clone https://github.com/blessedsoft/game-day-notifications.git
 cd game-day-notifications
 ```
 
-##**Setup Instructions**
+**Setup Instructions**
 
 **Create an SNS Topic**
-1. -In AWS, navigate to SNS and create a Standard topic.
-2. -Name the topic (e.g., gd_topic) and save the ARN.
+1. In AWS, navigate to SNS and create a Standard topic.
+2. Name the topic (e.g., gd_topic) and save the ARN.
 
 **Add Subscriptions**
--In SNS, click the topic and create a subscription.
--Choose Email or SMS protocol, and provide the required contact details.
+1. In SNS, click the topic and create a subscription.
+2. Choose Email or SMS protocol, and provide the required contact details.
 
 **Create SNS Publish Policy**
--In IAM, create a policy from gd_sns_policy.json.
--Replace REGION and ACCOUNT_ID with your values.
+1. In IAM, create a policy from gd_sns_policy.json.
+2. Replace REGION and ACCOUNT_ID with your values.
 
 **Create IAM Role for Lambda**
 -In IAM, create a role for Lambda, attaching the SNS Publish and Lambda Basic Execution policies.
 -Save the role ARN.
 
 **Deploy Lambda Function**
--In Lambda, create a new function using Python 3.x.
--Attach the IAM role, and paste the code from src/gd_notifications.py.
--Add environment variables (NBA_API_KEY, SNS_TOPIC_ARN).
--Create the function.
+1. In Lambda, create a new function using Python 3.x.
+2. Attach the IAM role, and paste the code from src/gd_notifications.py.
+3. Add environment variables (NBA_API_KEY, SNS_TOPIC_ARN).
+3. Create the function.
+4. Deploy and Test the function
 
 **Set Up Automation**
--In EventBridge, create a rule to trigger the Lambda function on a schedule (e.g., hourly) using cron
+1. In EventBridge, create a rule to trigger the Lambda function on a schedule (e.g., hourly) using cron
 
 **Test the System**
--Create a test event in Lambda.
--Run the function and check CloudWatch for logs.
--Ensure notifications are sent, check your email
+1. Create a test event in Lambda.
+2. Run the function and check CloudWatch for logs.
+3. Ensure notifications are sent, check your email
 
 
 **What We Learned**
--Design of a notification system with AWS SNS and Lambda.
--Securing services with least privilege policies.
--Automating workflows with EventBridge.
--Integrating external APIs.
+1. Design of a notification system with AWS SNS and Lambda.
+2. Securing services with least privilege policies.
+3. Automating workflows with EventBridge.
+4. Integrating external APIs.
 
 **Future Enhancements**
--Add NFL score alerts.
--Store user preferences in DynamoDB for personalized alerts.
--Build a web UI.
+1. Add NFL score alerts.
+2. Store user preferences in DynamoDB for personalized alerts.
+3. Build a web UI.
 
 
 

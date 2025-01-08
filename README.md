@@ -1,4 +1,4 @@
-# NBA Game Day Notifications / Sports Alerts System
+# NBA Game Day Notification System
 
 ## **Overview**
 An alert system that sends real-time NBA game scores to subscribers via SMS/Email using **Amazon SNS**, **AWS Lambda**, **Python**, **EventBridge**, and the **NBA API**.
@@ -14,7 +14,8 @@ An alert system that sends real-time NBA game scores to subscribers via SMS/Emai
 - AWS account and basic Python knowledge.
 
 ## **Technical Architecture**
-![NBA API Architecture](https://github.com/user-attachments/assets/5e19635e-0685-4c07-9601-330f7d1231f9)
+![image](https://github.com/user-attachments/assets/fb965771-eba0-4591-91cf-c294eecae55b)
+
 
 ## **Technologies**
 - **Cloud Provider**: AWS
